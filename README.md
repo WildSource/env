@@ -1,6 +1,6 @@
 # Env
 An extremely simple library to support env files.
-This library and is meant to be used with the basic enviroment variable support that Haskell has (System.Environment).
+This library is meant to be used with the basic enviroment variable support that Haskell has (System.Environment).
 ## Usage
 1. import the library (import Env) and System.Environment (we need getEnv)
 ```
