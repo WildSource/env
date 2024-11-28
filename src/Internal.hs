@@ -1,6 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
-
-module Internal where
+{-|
+Module      : Internal 
+Description : Module with utilities for the implementation 
+Copyright   : (c) WildSource, 2024
+License     : MIT 
+Maintainer  : ilovetrap123@hotmail.com
+Stability   : stable 
+Portability : portable 
+-}
+module Internal (parse) where
 
 import Data.Text (Text, splitOn, pack, unpack)
 
