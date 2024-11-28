@@ -50,10 +50,8 @@ loadEnv =
     isEnv :: String -> Bool
     isEnv = contains ".env" 
 
--- | If there are 2 or more .env file throw an error 
--- | or if there is no .env file found
-strain :: [String] -> String
-strain x 
-  | length x > 1 = error "2 or more .env files were found"
-  | concat x == "" = error "no .env file was found"
-  | otherwise = concat x
+    strain :: [String] -> String
+    strain x 
+      | length x > 1 = error "2 or more .env files were found"
+      | concat x == "" = error "no .env file was found"
+      | otherwise = concat x
