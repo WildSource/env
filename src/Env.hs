@@ -7,15 +7,36 @@ Maintainer  : ilovetrap123@hotmail.com
 Stability   : stable 
 Portability : portable 
 
-this library and is meant to be used with the basic enviroment variable support that Haskell has (System.Environment).
+This library is meant to be used with the basic environment variable support that Haskell has (System.Environment).
 
 1. import the library (import Env) and System.Environment (we need getEnv)
+
+@
+import Env
+import System.Environment
+@
+
 2. use the loadEnv or loadEnvFile function 
+
+@
+loadEnv
+loadEnvFile "pathToEnv.env"
+@
+
 3. to get your values just use the getEnv "nameOfKey" from System.Environment
 
-the difference between loadEnv and loadEnvFile 
- - loadEnv is meant to search automatically for a .env file. It will throw an error if 2 or more (or none) .env files are found
- - loadEnvFile is meant to be used with the path to the .env file (much safer)
+inside the env file -> HELLO=WORLD
+
+@
+getEnv \"HELLO\"
+\"WORLD\"
+@
+
+The difference between loadEnv and loadEnvFile.
+
+loadEnv is meant to search automatically for a .env file. It will throw an error if 2 or more (or none) .env files are found.
+
+loadEnvFile is meant to be used with the path to the .env file (much safer).
 -}
 module Env (loadEnv, loadEnvFile) where
 
