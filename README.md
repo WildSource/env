@@ -2,8 +2,26 @@
 An extremely simple library to support env files.
 This library is meant to be used with the basic environment variable support that Haskell has (System.Environment).
 ## Installation 
-This package has not yet been uploaded to hackage but the source code is available.
-You could compile it and include manually or something.
+This package is not on hackage but cabal (and stack) let's you use packages that are on github.
+(I don't use stack so you will have to figure it out yourself)
+
+1. Create cabal.project file if you don't have one already at the root of your project.
+   Essentially at the same location as your .cabal file and put this in the cabal.project file.
+   ```
+   packages: .
+
+   source-repository-package
+   type: git
+   location: https://github.com/WildSource/env
+   tag: v0.1.1.0
+   ```
+2. Add the library to your .cabal file.
+   ```
+   -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.20.0.0,
+                      env
+   ```
+3. Execute the **cabal update** and **cabal build** commands and you should be good to go.
 ## Usage
 1. import the library (import Env) and System.Environment (we need getEnv)
 ```
