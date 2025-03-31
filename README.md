@@ -13,12 +13,12 @@ This package is not on hackage but cabal (and stack) let's you use packages that
    source-repository-package
    type: git
    location: https://github.com/WildSource/env
-   tag: v0.1.1.0
+   tag: v1.0.0.0
    ```
 2. Add the library to your .cabal file.
    ```
    -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.20.0.0,
+    build-depends:    base ^>=4.17.2.1,
                       env
    ```
 3. Execute the **cabal update** and **cabal build** commands and you should be good to go.
