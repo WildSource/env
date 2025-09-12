@@ -13,7 +13,7 @@ This package is not on hackage but cabal (and stack) let's you use packages that
    source-repository-package
    type: git
    location: https://github.com/WildSource/env
-   tag: v1.0.0.0
+   tag: v1.0.0.1
    ```
 2. Add the library to your .cabal file.
    ```
